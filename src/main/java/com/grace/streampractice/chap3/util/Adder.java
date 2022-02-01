@@ -1,4 +1,4 @@
-package com.grace.streampractice.util;
+package com.grace.streampractice.chap3.util;
 
 import java.util.function.Function;
 
