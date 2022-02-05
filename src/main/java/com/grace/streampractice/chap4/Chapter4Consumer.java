@@ -12,7 +12,6 @@ public class Chapter4Consumer {
 
         myStringConsumer.accept("hello!");
 
-        //
         List<Integer> integerInputs = Arrays.asList(4,2,3);
         Consumer<Integer> myIntegerProcessor = x -> System.out.println("Processing Integer " + x);
         process(integerInputs, myIntegerProcessor);
