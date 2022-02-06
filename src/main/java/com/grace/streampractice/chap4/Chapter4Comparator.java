@@ -9,6 +9,7 @@ import java.util.List;
 
 public class Chapter4Comparator {
     // Comparator : 비교를 위한 인터페이스
+    // input2개를 받아서 어떤것이 더 앞으로 가야하는지 integer를 리턴하며 알려주는 interface
 
     public static void main(String[] args) {
 
