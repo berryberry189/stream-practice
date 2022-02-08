@@ -23,6 +23,7 @@ public class Chapter5MethodReference {
     }
 
     public static void main(String[] args) {
+        // 1. ClassName::staticMethodName 클래스의 static method 를 지정할 때
         // int a =  Integer.parseInt("15");
         Function<String, Integer> strToInt = Integer::parseInt;
         System.out.println(strToInt.apply("20"));
@@ -37,6 +38,7 @@ public class Chapter5MethodReference {
         // static 메소드를 호출하는 경우
         System.out.println(calculate(8, 2, Chapter5MethodReference::multiply));
 
+        // 2. objectName::instanceMethodName 선언된 객체의 instance method 를 지정할 때
         // static 이 아닌 메소드 호출하는 경우
         Chapter5MethodReference instance = new Chapter5MethodReference();
         System.out.println(calculate(8, 2, instance::subtract));
