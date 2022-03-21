@@ -41,7 +41,7 @@ public class Chapter7Optional {
         //System.out.println(email3);
         // orElseGet supplier를 만들어줌
         String email4 = maybeEmail2.orElseGet(()->defaultEmail);
-        //System.out.println(email4);
+        // System.out.println(email4);
         String email5 = maybeEmail2.orElseThrow(()->new RuntimeException("email not present"));
         System.out.println(email5);
 
@@ -53,7 +53,5 @@ public class Chapter7Optional {
                 && u1.getEmailAddress().equals(u2.getEmailAddress())
                 && u1.isVerified() == u2.isVerified();
     }
-
-
 
 }
