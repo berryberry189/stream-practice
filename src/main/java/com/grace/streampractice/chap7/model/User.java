@@ -1,6 +1,7 @@
 package com.grace.streampractice.chap7.model;
 
 import java.util.List;
+import java.util.Optional;
 
 public class User {
     private int id;
@@ -28,8 +29,9 @@ public class User {
         return this;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    // 이메일이 없으면 빈 optional 반환
+    public Optional<String> getEmailAddress() {
+        return Optional.ofNullable(emailAddress);
     }
 
     public User setEmailAddress(String emailAddress) {
