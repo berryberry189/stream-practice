@@ -31,6 +31,7 @@ public class Chapter7Optional2 {
         flatmapOptionalEmail.ifPresent(System.out::println);
 
     }
+
     public static User maybeGetUser(boolean returnUser){
         if(returnUser){
             return new User()
