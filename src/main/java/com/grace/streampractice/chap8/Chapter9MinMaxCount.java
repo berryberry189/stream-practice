@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 import static com.grace.streampractice.chap6.model.Order.OrderStatus.*;
 
 public class Chapter9MinMaxCount {
+
     public static void main(String[] args) {
 
         // 가장 큰 integer
