@@ -108,6 +108,5 @@ public class Chapter9MinMaxCount {
                 .max(BigDecimal::compareTo)
                 .orElse(BigDecimal.ZERO);
         System.out.println(maxErrorAmount);
-
     }
 }
