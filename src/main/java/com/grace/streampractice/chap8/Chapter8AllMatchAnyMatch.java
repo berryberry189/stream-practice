@@ -9,7 +9,7 @@ import java.util.List;
 
 import static com.grace.streampractice.chap6.model.Order.OrderStatus.*;
 
-public class Chapter9AllMatchAnyMatch {
+public class Chapter8AllMatchAnyMatch {
 
     // allMatch : Stream 안의 모든 데이터가 predicate 를 만족하면 true
     // anyMatch : Stream 안의 데이터중 하나라도 predicate 를 만족하면 true
@@ -72,7 +72,5 @@ public class Chapter9AllMatchAnyMatch {
         boolean isAnyOrderInErrorStatus = orders.stream()
                 .anyMatch(o -> ERROR.equals(o.getStatus()));
         System.out.println(isAnyOrderInErrorStatus);
-
-
     }
 }
