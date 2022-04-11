@@ -44,6 +44,5 @@ public class Chapter8PartitioningBy {
         for (User user : userPartitions.get(false)) {
             emailService.sendMakeMoreFriendsEmail(user);
         }
-
     }
 }
