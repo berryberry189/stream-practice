@@ -27,10 +27,9 @@ public class Chapter9ScopeClosureCurry {
 
     public static Supplier<String> getStingSupplier(){
         String hello = "Hello";
-        Supplier<String> supplier = () -> {
+        return () -> {
             String world = "World";
             return hello + world;
         };
-        return supplier;
     }
 }
