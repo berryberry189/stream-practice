@@ -35,8 +35,5 @@ public class Chapter10DecoratorPattern {
 
     // Original Price, then applied tax, then apply another procedure
     System.out.println(processedPrice2.getPrice());
-
   }
-
-
 }
