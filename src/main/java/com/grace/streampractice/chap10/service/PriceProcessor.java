@@ -2,7 +2,8 @@ package com.grace.streampractice.chap10.service;
 
 import com.grace.streampractice.chap10.model.Price;
 
-@FunctionalInterface
+@FunctionalInterface // 추상 메서드가 1개만 존재하는 interface
+// 함수형 인터페이스를 사용하는 이유 : 람다식은 함수형 인터페이스로만 접근이 가능하기 때문
 public interface PriceProcessor {
 
   Price process(Price price);
