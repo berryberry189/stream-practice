@@ -65,5 +65,13 @@ public class Chapter8GroupingBy {
                                 Collectors.reducing(BigDecimal.ZERO, BigDecimal::add)))); // 추출된 amount 를 더하기
         System.out.println(orderStatusToSumOdAmountMap);
 
+        // key : OrderStatus key, value: amount list
+        Map<OrderStatus, List<BigDecimal>> orderStatusToAmountListMap = orders.stream()
+                .collect(Collectors.groupingBy(Order::getStatus,
+                        Collectors.mapping(Order::getAmount, Collectors.toList())));
+        System.out.println("======= orderStatusToAmountListMap =======");
+        System.out.println(orderStatusToAmountListMap);
+
+
     }
 }
