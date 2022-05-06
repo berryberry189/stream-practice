@@ -33,7 +33,7 @@ public class Chapter10Strategy {
                     builder.isVerified = true;
                     builder.friendUserIds = Arrays.asList(201, 205, 211, 223);
                 }).build();
-        List<User> users = Arrays.asList(user1, user2, user2);
+        List<User> users = Arrays.asList(user1, user2, user3);
 
         EmailSender emailSender = new EmailSender();
         EmailProvider verifyYourEmailProvider = new VerifyYourEmailProvider();
