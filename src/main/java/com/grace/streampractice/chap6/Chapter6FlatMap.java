@@ -76,5 +76,13 @@ public class Chapter6FlatMap {
                 .collect(Collectors.toList());
         System.out.println(orderLineList);
 
+
+        BigDecimal allAmount = orders.stream()
+            .map(Order::getOrderLines)
+            .flatMap(List::stream)
+            .map(OrderLine::getAmount)
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+        System.out.println(allAmount);
+
     }
 }

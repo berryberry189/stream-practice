@@ -7,8 +7,10 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static com.grace.streampractice.chap6.model.Order.OrderStatus.*;
@@ -101,6 +103,10 @@ public class Chapter8MinMaxCount {
                 .max((o1, o2) -> o1.getAmount().compareTo(o2.getAmount()))
                 .get();
         System.out.println(errorStatusOrderWithMaxAmount);
+        Order errorStatusOrderWithMaxAmount2 = orders.stream()
+            .filter(order -> ERROR.equals(order.getStatus()))
+            .max(Comparator.comparing(Order::getAmount))
+            .get();
 
         BigDecimal maxErrorAmount = orders.stream()
                 .filter(order -> ERROR.equals(order.getStatus()))
