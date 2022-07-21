@@ -6,6 +6,8 @@ import com.grace.streampractice.chap6.model.User;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import static com.grace.streampractice.chap6.model.Order.OrderStatus.*;
 
@@ -72,5 +74,21 @@ public class Chapter8AllMatchAnyMatch {
         boolean isAnyOrderInErrorStatus = orders.stream()
                 .anyMatch(o -> ERROR.equals(o.getStatus()));
         System.out.println(isAnyOrderInErrorStatus);
+
+
+        // any match 테스트
+        // A목록 B목록 있을 때, A와 B목록에서 겹치는 항목을 제외한 A목록의 남은 요소 구하기
+
+        List<Long> A = List.of(1L, 2L, 3L, 4L, 5L);
+        List<Long> B = List.of(4L, 5L, 6L, 7L, 8L);
+
+        List<Long> noneMatchList =
+                A.stream()
+                        .filter(i -> B.stream().noneMatch(Predicate.isEqual(i)))
+                        .collect(Collectors.toList());
+
+        System.out.println("");
+        System.out.println("================================");
+        System.out.println(noneMatchList);
     }
 }
