@@ -88,7 +88,16 @@ public class Chapter8AllMatchAnyMatch {
                         .collect(Collectors.toList());
 
         System.out.println("");
-        System.out.println("================================");
+        System.out.println("=============== noneMatchList =================");
         System.out.println(noneMatchList);
+
+        List<Long> anyMatch =
+            A.stream()
+                .filter(i -> B.stream().anyMatch(Predicate.isEqual(i)))
+                .collect(Collectors.toList());
+
+        System.out.println("");
+        System.out.println("================ anyMatch ================");
+        System.out.println(anyMatch);
     }
 }
