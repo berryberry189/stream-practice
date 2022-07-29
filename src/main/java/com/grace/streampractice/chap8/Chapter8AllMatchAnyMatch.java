@@ -99,5 +99,6 @@ public class Chapter8AllMatchAnyMatch {
         System.out.println("");
         System.out.println("================ anyMatch ================");
         System.out.println(anyMatch);
+
     }
 }
