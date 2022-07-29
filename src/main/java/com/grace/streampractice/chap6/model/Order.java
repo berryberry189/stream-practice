@@ -11,6 +11,7 @@ public class Order {
     private OrderStatus status;
     private BigDecimal amount;
     private List<OrderLine> orderLines;
+    private String orderName;
 
     public enum OrderStatus {
         CREATED,
@@ -61,6 +62,15 @@ public class Order {
 
     public Order setAmount(BigDecimal amount) {
         this.amount = amount;
+        return this;
+    }
+
+    public String getOrderName() {
+        return orderName;
+    }
+
+    public Order setOrderName(String orderName) {
+        this.orderName = orderName;
         return this;
     }
 
